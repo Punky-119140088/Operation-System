@@ -1,0 +1,15 @@
+if [ $# -eq 0 ]  
+ then  
+ echo " "  
+ else  
+ for x in $*  
+ do  
+ if [ -f $x ]  
+ then  
+ y=`echo $x | tr '[a-z]' '[A-Z]' `  
+ mv $i $y
+ echo "New file name is: $y"  
+ else  
+ echo "Not a file"  
+ fi  
+ done
